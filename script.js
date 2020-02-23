@@ -14,10 +14,10 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 const generatePassword = (
-    passwordLength = 8,
-    useUpperCase = true,
-    useNumbers = true,
-    useSpecialChars = true,
+    passwordLength = prompt("Choose the number of characters between 8 and 128"),
+    useUpperCase = confirm("Use Upper Case?"),
+    useNumbers = confirm("Use Numbers?"),
+    useSpecialChars = confirm("Use Special Characters?"),
 ) => {
     const chars = 'abcdefghijklmnopqrstuvwxyz'
     const numberChars = '0123456789'
