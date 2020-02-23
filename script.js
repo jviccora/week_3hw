@@ -13,8 +13,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+
+
 const generatePassword = (
-    passwordLength = prompt("Choose the number of characters between 8 and 128"),
+    passwordLength = prompt("Choose the number of characters between 8 and 128").max = "128".min = "8",
     useUpperCase = confirm("Use Upper Case?"),
     useNumbers = confirm("Use Numbers?"),
     useSpecialChars = confirm("Use Special Characters?"),
