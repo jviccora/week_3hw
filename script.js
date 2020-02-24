@@ -17,7 +17,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 const generatePassword = (
-    passwordLength = prompt("Choose the number of characters between 8 and 128"),
+
     useUpperCase = confirm("Use Upper Case?"),
     useNumbers = confirm("Use Numbers?"),
     useSpecialChars = confirm("Use Special Characters?"),
@@ -30,7 +30,10 @@ const generatePassword = (
         (useUpperCase ? chars.toUpperCase() : '') +
         (useNumbers ? numberChars : '') +
         (useSpecialChars ? specialChars : '')
-
+    let passwordLength = prompt("Choose the number of characters between 8 and 128");
+    while (passwordLength < 8 || passwordLength > 128) {
+        passwordLength = prompt("Number of characters must be between 8 and 128")
+    }
     let generatedPassword = ''
 
     for (i = 0; i <= passwordLength; i++) {
