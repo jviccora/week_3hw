@@ -36,7 +36,7 @@ const generatePassword = (
     }
     let generatedPassword = ''
 
-    for (i = 0; i <= passwordLength; i++) {
+    for (i = 0; i < passwordLength; i++) {
         generatedPassword += usableChars[Math.floor(Math.random() * (usableChars.length))]
     }
 
